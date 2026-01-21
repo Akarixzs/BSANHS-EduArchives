@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>⚛️Physical Science⚛️</title>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg-gradient: linear-gradient(135deg, #00416A, #E4E5E6);
+      --card-bg: rgba(255,255,255,0.25);
+      --text-color: #ffffff;
+      --button-bg: #ffffff;
+      --button-text: #00416A;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: var(--bg-gradient);
+      color: var(--text-color);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* HEADER IMAGES */
+    .image-wrap {
+      position: relative;
+      width: 100%;
+      max-width: 900px;
+      height: 120px;
+      margin-bottom: 10px;
+    }
+    .image-wrap img { height: 100px; object-fit: contain; }
+    .img-left { position: absolute; left: 0; top: 10px; }
+    .img-right { position: absolute; right: 0; top: 10px; }
+
+    /* TITLE */
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+
+    .description {
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+      color: #e3f2ff;
+    }
+
+    /* SEARCH BAR */
+    .search-container {
+      margin-bottom: 20px;
+    }
+    .search-container input {
+      padding: 10px;
+      width: 250px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    .search-container button {
+      padding: 10px 15px;
+      border: none;
+      background: #007bff;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .search-container button:hover {
+      background: #0056b3;
+    }
+
+    /* GRID LAYOUT */
+    .grid {
+      width: 100%;
+      max-width: 900px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    /* CARD STYLE */
+    .card {
+      background: var(--card-bg);
+      backdrop-filter: blur(5px);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      color: #000;
+      display: flex;
+      flex-direction: column;
+    }
+    .card-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .card a {
+      margin-top: auto;
+      background: #ffffff;
+      padding: 10px;
+      border-radius: 10px;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 600;
+      color: #00416A;
+    }
+    .card a:hover { opacity: 0.85; }
+
+    /* BACK BUTTON */
+    .back-link {
+      display: inline-block;
+      padding: 10px 22px;
+      background: var(--button-bg);
+      color: var(--button-text);
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    .back-link:hover { opacity: 0.85; }
+
+    /* RESULTS TEXT */
+    .result {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      font-size: 0.8rem;
+      padding: 5px 10px;
+      color: rgba(0,0,50,0.45);
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2.1rem; }
+      .image-wrap img { height: 75px; }
+      .image-wrap { height: 90px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div style="color: green;" class="result">results found: 12/12</div>
+
+  <div class="image-wrap">
+    <img src="Edu-Archieve_Images_/logo2.png" class="img-left" alt="Logo">
+    <img src="Edu-Archieve_Images_/wapen1.png" class="img-right" alt="Wapen">
+  </div>
+
+  <h1>⚛️Physical Science⚛️</h1>
+  <div class="description">Here are all research studies that fall under the Physical Science category.</div>
+
+  <!-- 🔎 Search Bar -->
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search studies...">
+    <button onclick="performSearch()">Search</button>
+  </div>
+
+  <!-- GRID OF STUDY CARDS -->
+  <div class="grid">
+    <div class="card"><div class="card-title">Bio-based Exhaust Filter (Milkfish Scales)</div><a href="https://drive.google.com/file/d/1lXGacAzsOGg8mhQRIB-yj8HfMp4axdfF/view?usp=sharing" target="_blank">View Study</a></div>
+    <div class="card"><div class="card-title">White Kidney Beans as Bio-Packing Peanuts</div><a href="https://drive.google.com/file/d/14uXm-53X-yHzNK3yhGH4yIOZEiFG370S/view?usp=sharing" target="_blank">View Study</a></div>
+    <div class="card"><div class="card-title">Cabbage Waste as Fine Aggregate</div><a href="https://docs.google.com/document/d/1LBICnLA-ilMIa0PbX4V_gQHtF5_hsvAOmH6TtfOF9qo/edit?usp=sharing" target="_blank">View Study</a></div>
+    <div class="card"><div class="card-title">Eggplant Peel as Fine Aggregate</div><a href="https://drive.google.com/file/d/1ZMrnqibdveuKDSqQgSu4lKgOep8Indtw/view?usp=sharing" target="_blank">View Study</a></div>
+    <div class="card"><div class="card-title">Dried Para Grass Briquettes</div><a href="https://drive.google.com/file/d/1uEmyuMhPbszy_z0A6KoRKMhQ6Fjtxd33/view?usp=sharing" target="_blank">View Study</a></div>
+    <div class="card"><div class="card-title">Pineapple Leaves Fuel Briquettes</div><a href="https://docs.google.com/document/d/1c_-_guwknfgnTD6j4VhF7vliOlGlyz4VC1_5NnMR4lc/edit?usp=sharing" target="_blank">View Study</a></div>
+    <div class="card"><div class="card-title">Yellow Bamboo Fiber Filtration</div><a href="https://drive.google.com/file/d/1Ms4s9KJWa4D1xm_BzrmApfqLjsP2RrXQ/view?usp=sharing" target="_blank">View Study</a></div>
+    <div class="card"><div class="card-title">Carabao Mango Peels as Fine Aggregate</div><a href="https://docs.google.com/document/d/1vvMQwp5eAetV05YT-31iWi_K3-l3WLEtVybZqAaR3tQ/edit?usp=sharing" target="_blank">View Study</a></div>
+    <div class="card"><div class="card-title">Rice Husk for Water Purification</div><a href="https://docs.google.com/document/d/1BY_gG6AuLCYnECj8SHk5wZzVHDOPP2pA1ktFqCgjwu4/edit?usp=sharing" target="_blank">View Study</a></div>
+    <div class="card"><div class="card-title">Abaca Leaves Fuel Briquettes</div><a href="https://drive.google.com/file/d/17lQFJHKKY0CnK4Z6uOhLBQKH2YXE3Bar/view?usp=sharing" target="_blank">View Study</a></div>
+    <div class="card"><div class="card-title">Red Onion Peels as Fine Aggregate</div><a href="https://drive.google.com/file/d/15vwsG-Qm22hiaEsMG16FndU2cIyUUr30/view?usp=sharing" target="_blank">View Study</a></div>
+    <div class="card"><div class="card-title">Spiny Bamboo Fiber Filtration</div><a href="https://drive.google.com/file/d/16-BSE-zGcSVtAXhsbE_4iADlLiuNqXf2/view?usp=sharing" target="_blank">View Study</a></div> 
+  </div>
+
+  <a href="home.html" class="back-link">← Back to Main Page</a>
+
+  <script>
+    function performSearch() {
+      const query = document.getElementById("searchInput").value.toLowerCase();
+      const cards = document.querySelectorAll(".card");
+      let count = 0;
+
+      cards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        if (text.includes(query)) {
+          card.style.display = "block";
+          count++;
+        } else {
+          card.style.display = "none";
+        }
+      });
+
+      // Update results counter
+      document.querySelector(".result").textContent = `results found: ${count}/${cards.length}`;
+    }
+  </script>
+</body>
+</html>
